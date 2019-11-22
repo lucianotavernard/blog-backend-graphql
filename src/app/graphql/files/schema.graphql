@@ -1,0 +1,8 @@
+type File {
+  id: ID!
+  createdAt: Date!
+  updatedAt: Date!
+  name: String!
+  path: String!
+  url: String!
+}

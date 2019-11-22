@@ -1,0 +1,23 @@
+input CreatePostInput {
+  title: String!
+  content: String!
+}
+
+type Post {
+  id: ID!
+  createdAt: Date!
+  updatedAt: Date!
+  user: User!
+  title: String!
+  content: String!
+  comments: [Comment]
+}
+
+type Query {
+  post(id: ID!): Post
+  posts(first: Int, offset: Int): [Post!]
+}
+
+type Mutation {
+  createPost(input: CreatePostInput!): Post!
+}
